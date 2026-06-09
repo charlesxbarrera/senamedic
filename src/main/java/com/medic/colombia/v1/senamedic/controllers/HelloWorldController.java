@@ -6,6 +6,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 
 public class HelloWorldController {
+    @GetMapping()
+    public String inicio(){
+        System.out.println("paso por el inicioi");
+        return "esta en el inicio";
+
+    }
+
     @GetMapping("/saludar")
 
     public String saludar() {
