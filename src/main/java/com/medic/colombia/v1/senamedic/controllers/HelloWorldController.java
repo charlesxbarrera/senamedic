@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWorldController {
     @GetMapping()
     public String inicio(){
-        System.out.println("paso por el inicioi");
+        System.out.println("paso por el inicio");
         return "esta en el inicio";
 
     }

@@ -1,15 +1,15 @@
 package com.medic.colombia.v1.senamedic.controllers;
 
-import ch.qos.logback.core.read.ListAppender;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
-@RestController("/nombre")
+@RestController
+@RequestMapping("/nombre")
 
-public class nombrecontroller {
+public class Nombrecontroller {
 
-    private ArrayList<String>nombres = new ArrayList<>();
+    private ArrayList<String> nombres = new ArrayList<>();
 
 
     @PostMapping("/{nombre}")
@@ -23,7 +23,7 @@ public class nombrecontroller {
 
         }
 
-        return "Nombre agragado" : "Nombre no agregado";
+        return isAdded ? "Nombre agragado" : "Nombre no agregado";
 
     }
     @GetMapping()
