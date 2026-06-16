@@ -14,6 +14,7 @@ public class Nombrecontroller {
 
     @PostMapping("/{nombre}")
     public String crear(@PathVariable("nombre") String nombre){
+        System.out.println("El nombre que llega es " + nombre);
 
         boolean isAdded = false;
 
@@ -23,7 +24,7 @@ public class Nombrecontroller {
 
         }
 
-        return isAdded ? "Nombre agragado" : "Nombre no agregado";
+        return isAdded ? "Nombre agragado" + nombre + "La cantidad de nombres es" + nombres.size() : "Nombre no agregado";
 
     }
     @GetMapping()
